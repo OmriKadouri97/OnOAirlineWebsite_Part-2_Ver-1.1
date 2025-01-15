@@ -1,0 +1,31 @@
+<div class="manage-destinations">
+    <h2>Manage Destinations</h2>
+  
+    <table class="destinations-table">
+      <thead>
+        <tr>
+          <th>Destination Code</th>
+          <th>Destination Name</th>
+          <th>Airport Name</th>
+          <th>Airport Website</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let destination of destinations">
+          <td>{{ destination.code }}</td>
+          <td>{{ destination.name }}</td>
+          <td>{{ destination.airportName }}</td>
+          <td>
+            <a [href]="destination.airportWebsite" target="_blank">{{ destination.airportWebsite }}</a>
+          </td>
+          <td>{{ destination.email }}</td>
+          <td>
+            <button class="btn btn-view" (click)="viewDestinationDetails(destination)">View Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,49 @@
+.manage-destinations {
+    margin: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .destinations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .destinations-table th,
+  .destinations-table td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .destinations-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  
+  a {
+    color: #0078d7;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-view {
+    background-color: #0078d7;
+    color: white;
+  }
+  
+  .btn-view:hover {
+    background-color: #005a9e;
+  }
+  
