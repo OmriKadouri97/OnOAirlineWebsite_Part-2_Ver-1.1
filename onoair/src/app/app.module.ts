@@ -6,15 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
- 
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule, // Provides Angular's common directives and pipes
-    FormsModule, // Enables template-driven forms
-    BrowserAnimationsModule, // Required for Angular Material animations
+    CommonModule,
+    FormsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [],
 })
 export class AppModule {}
