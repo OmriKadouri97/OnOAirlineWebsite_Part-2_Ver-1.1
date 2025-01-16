@@ -4,4 +4,4 @@ import { AppComponent } from './app/app.component';
 
 platformBrowserDynamic()
   .bootstrapComponent(AppComponent)
-  .catch((err) => console.error('Error bootstrapping the application:', err));
+  .catch((err: unknown) => console.error('Error bootstrapping:', err));
