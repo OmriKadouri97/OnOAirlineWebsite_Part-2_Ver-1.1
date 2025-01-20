@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FlightService, Flight } from '../../../core/services/flight.service';
+import { FlightService } from '../../../core/services/flight.service';
+import { Flight } from '../../../core/models/flight.model';
 
 @Component({
   selector: 'app-manage-flights',

@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #1976d2;
+    color: white;
+  }
+  header h1 a {
+    text-decoration: none;
+    color: white;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  

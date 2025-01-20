@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DestinationService, Destination } from '../../../core/services/destination.service';
+import { DestinationService} from '../../../core/services/destination.service';
+import { Destination } from '../../../core/models/destination.model';
 
 @Component({
   selector: 'app-manage-destinations',
@@ -19,7 +20,7 @@ export class ManageDestinationsComponent implements OnInit {
   }
 
   private loadDestinations(): void {
-    this.destinations = this.destinationService.getAll();
+    this.destinations = this.destinationService.getAllDestinations();
   }
 
   viewDestinationDetails(destination: Destination): void {

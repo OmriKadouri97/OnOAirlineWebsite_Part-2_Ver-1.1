@@ -1,0 +1,44 @@
+section {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 1rem;
+  }
+  
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #1976d2;
+  }
+  
+  .last-minute-flights .flights-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .flight-card {
+    width: 280px;
+  }
+  
+  .mat-elevation-z8 {
+    margin: 1rem auto;
+    width: 100%;
+  }
+  
+  .mat-table th {
+    background-color: #1976d2;
+    color: white;
+  }
+  
+  .mat-table td,
+  .mat-table th {
+    text-align: center;
+    padding: 0.5rem;
+  }
+  
+  button {
+    font-weight: bold;
+  }
+  

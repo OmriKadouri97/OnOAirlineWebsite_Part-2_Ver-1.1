@@ -1,10 +1,25 @@
-<header class="app-header">
-    <h1>{{ appName }}</h1>
-    <nav>
-      <a routerLink="/home">Home</a>
-      <a routerLink="/bookings">My Bookings</a>
-      <a routerLink="/admin/manage-flights">Manage Flights</a>
-      <a routerLink="/admin/manage-destinations">Manage Destinations</a>
-    </nav>
-  </header>
-  
+<header class="header">
+  <div class="header-content">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1><a routerLink="/">OnoAir</a></h1>
+  </div>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="adminMenu">Admin</button>
+    <button mat-menu-item [matMenuTriggerFor]="userMenu">User</button>
+  </mat-menu>
+
+  <!-- Admin Submenu -->
+  <mat-menu #adminMenu="matMenu">
+    <button mat-menu-item routerLink="/admin/manage-flights">Manage Flights</button>
+    <button mat-menu-item routerLink="/admin/manage-destinations">Manage Destinations</button>
+  </mat-menu>
+
+  <!-- User Submenu -->
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item routerLink="/search-flight">Search a flight</button>
+    <button mat-menu-item routerLink="/my-bookings">My Bookings</button>
+  </mat-menu>
+</header>

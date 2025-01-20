@@ -5,7 +5,7 @@
       <thead>
         <tr>
           <th scope="col">Flight Number</th>
-          <th scope="col">Departure</th>
+          <th scope="col">Departure Code</th>
           <th scope="col">Destination</th>
           <th scope="col">Departure Date</th>
           <th scope="col">Arrival Date</th>
@@ -16,11 +16,11 @@
       <tbody>
         <tr *ngFor="let flight of flights">
           <td>{{ flight.flightNumber }}</td>
-          <td>{{ flight.departure }}</td>
-          <td>{{ flight.destination }}</td>
-          <td>{{ flight.departureDate | date: 'shortDate' }}</td>
-          <td>{{ flight.arrivalDate | date: 'shortTime' }}</td>
-          <td>{{ flight.seats }}</td>
+          <td>{{ flight.departureCode }}</td>
+          <td>{{ flight.arrivalCode }}</td>
+          <td>{{ flight.departureDateTime | date: 'shortDate' }}</td>
+          <td>{{ flight.arrivalDateTime | date: 'shortTime' }}</td>
+          <td>{{ flight.numberOfSeats }}</td>
           <td>
             <button class="btn btn-view" (click)="viewFlightDetails(flight)">View Details</button>
           </td>
