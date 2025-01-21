@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { FlightService} from '../../core/services/flight.service';
+import { FlightService, EnrichedFlight } from '../../core/services/flight.service';
 import { Flight } from '../../core/models/flight.model';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { FlightDetailsDialogComponent } from '../flight-details-dialog/flight-details-dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -14,13 +16,20 @@ import { MatTableModule } from '@angular/material/table';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  lastMinuteFlights: Flight[] = [];
+  lastMinuteFlights: EnrichedFlight[] = [];
   futureFlights: Flight[] = [];
 
-  constructor(private flightService: FlightService) {}
+  constructor(private flightService: FlightService, private dialog: MatDialog) {}
 
   ngOnInit() {
     this.lastMinuteFlights = this.flightService.getLastMinuteFlights();
     this.futureFlights = this.flightService.getFutureFlights();
+  }
+
+  openFlightDetails(flight: Flight): void {
+    this.dialog.open(FlightDetailsDialogComponent, {
+      width: '400px',
+      data: flight,
+    });
   }
 }

@@ -1,4 +1,3 @@
-// src/app/core/services/destination.service.ts
 import { Injectable } from '@angular/core';
 import { Destination } from '../models/destination.model';
 
@@ -8,13 +7,49 @@ import { Destination } from '../models/destination.model';
 export class DestinationService {
   private destinations: Destination[] = [
     {
-      destinationCode: 'CDG',
-      name: 'Paris',
-      airportName: 'Charles de Gaulle Airport',
-      airportWebsite: 'https://www.parisaeroport.fr/',
-      email: 'contact@parisaeroport.fr',
-      imageUrl: 'paris.jpg',
+      destinationCode: 'TLV',
+      name: 'Tel Aviv',
+      airportName: 'Ben Gurion Airport',
+      airportWebsite: 'https://www.iaa.gov.il/en/airports/ben-gurion/',
+      email: 'contact@tlvairport.com',
+      imageUrl: 'tel-aviv.jpg',
       id: '1',
+    },
+    {
+      destinationCode: 'KRK',
+      name: 'Krakow',
+      airportName: 'Krakow John Paul II International Airport',
+      airportWebsite: 'https://www.krakowairport.pl/en/',
+      email: 'contact@krakowairport.com',
+      imageUrl: 'https://i0.wp.com/theexiledsoul.com/wp-content/uploads/2022/10/img_7609.jpg?resize=720%2C471&ssl=1',
+      id: '2',
+    },
+    {
+      destinationCode: 'LCA',
+      name: 'Larnaca',
+      airportName: 'Larnaca International Airport',
+      airportWebsite: 'https://www.hermesairports.com/',
+      email: 'contact@larnacaairport.com',
+      imageUrl: 'larnaca.jpg',
+      id: '3',
+    },
+    {
+      destinationCode: 'ZRH',
+      name: 'Zurich',
+      airportName: 'Zurich Airport',
+      airportWebsite: 'https://www.zurich-airport.com/',
+      email: 'contact@zurichairport.com',
+      imageUrl: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/02/27/15/zurich-view.jpg?quality=75&width=1368&crop=3%3A2%2Csmart&auto=webp',
+      id: '4',
+    },
+    {
+      destinationCode: 'LHR',
+      name: 'London',
+      airportName: 'London Heathrow Airport',
+      airportWebsite: 'https://www.heathrow.com/',
+      email: 'contact@heathrow.com',
+      imageUrl: 'london.jpg',
+      id: '5',
     },
     {
       destinationCode: 'JFK',
@@ -22,14 +57,24 @@ export class DestinationService {
       airportName: 'John F. Kennedy International Airport',
       airportWebsite: 'https://www.jfkairport.com/',
       email: 'contact@jfkairport.com',
-      imageUrl: 'new-york.jpg',
-      id: '2',
+      imageUrl: 'https://nyc.eu/wp-content/uploads/2015/07/New_York_City-scaled.jpg',
+      id: '6',
     },
   ];
+
+  /**
+   * Get all destinations.
+   * @returns Array of all destinations
+   */
   getAllDestinations(): Destination[] {
     return this.destinations;
   }
 
+  /**
+   * Get a specific destination by code.
+   * @param destinationCode Code of the destination
+   * @returns The destination object if found, undefined otherwise
+   */
   getDestinationByCode(destinationCode: string): Destination | undefined {
     return this.destinations.find(dest => dest.destinationCode === destinationCode);
   }

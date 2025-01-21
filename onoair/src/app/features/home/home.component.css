@@ -1,44 +1,106 @@
+/* General section styling */
 section {
-    margin: 2rem auto;
-    max-width: 1200px;
-    padding: 1rem;
-  }
-  
-  h2 {
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
-    text-align: center;
-    color: #1976d2;
-  }
-  
-  .last-minute-flights .flights-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
-  .flight-card {
-    width: 280px;
-  }
-  
-  .mat-elevation-z8 {
-    margin: 1rem auto;
-    width: 100%;
-  }
-  
-  .mat-table th {
-    background-color: #1976d2;
-    color: white;
-  }
-  
-  .mat-table td,
-  .mat-table th {
-    text-align: center;
-    padding: 0.5rem;
-  }
-  
-  button {
-    font-weight: bold;
-  }
-  
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #1976d2;
+}
+
+/* Last Minute Flights Section */
+.last-minute-flights {
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.section-title {
+  text-align: center;
+  color: #1976d2;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.flights-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.flight-card {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  background-color: #d3cebe;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.flight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Material Card Styling */
+mat-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+mat-card img {
+  width: 150px; /* Small image width */
+  height: 150px; /* Small image height */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-left: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+mat-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+mat-card-content h3 {
+  font-size: 1.5rem;
+  color: #1976d2;
+  margin: 0 0 0.5rem;
+}
+
+mat-card-content p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+  color: #555;
+}
+
+/* Buttons */
+mat-card-actions {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 0.5rem;
+}
+
+button {
+  font-weight: bold;
+  background-color: #1976d2;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #145a9e;
+}

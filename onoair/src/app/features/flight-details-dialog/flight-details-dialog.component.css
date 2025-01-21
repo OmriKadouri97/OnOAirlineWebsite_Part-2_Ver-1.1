@@ -1,0 +1,17 @@
+mat-dialog-content {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  
+  mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #1976d2;
+    margin-bottom: 1rem;
+  }
+  

@@ -1,0 +1,50 @@
+<section class="help-page">
+    <h1 class="page-title">Help & Support</h1>
+  
+    <!-- Search Bar -->
+    <mat-form-field class="search-bar" appearance="outline">
+      <mat-label>Search Help Topics</mat-label>
+      <input
+        matInput
+        type="text"
+        [(ngModel)]="searchQuery"
+        placeholder="Type your query here..."
+      />
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  
+    <!-- FAQ Accordion -->
+    <mat-accordion>
+      <mat-expansion-panel
+        *ngFor="let section of filteredFaqSections"
+        class="faq-panel"
+      >
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ section.title }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <p>{{ section.content }}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  
+    <!-- Contact Support -->
+    <div class="support-section">
+      <h2>Contact Us</h2>
+      <div class="contact-methods">
+        <div class="contact-item">
+          <mat-icon>email</mat-icon>
+          <span>Email: support&#64;onoair.com</span>
+        </div>
+        <div class="contact-item">
+          <mat-icon>call</mat-icon>
+          <span>Phone: +1-800-ONO-AIR</span>
+        </div>
+        <div class="contact-item">
+          <mat-icon>chat</mat-icon>
+          <span>Live Chat: Available 24/7</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
