@@ -7,11 +7,9 @@ import { ManageDestinationsComponent } from './features/admin/ManageDestination/
 import { HelpComponent } from './shared/help/help.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent},
   { path: 'help', component: HelpComponent },
   { path: 'bookings', component: BookingsComponent },
   { path: 'admin/manage-flights', component: ManageFlightsComponent },
   { path: 'admin/manage-destinations', component: ManageDestinationsComponent },
-  { path: '**', redirectTo: '/home' }, // Fallback route
 ];

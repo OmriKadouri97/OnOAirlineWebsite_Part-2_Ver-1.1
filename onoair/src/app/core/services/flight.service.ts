@@ -44,6 +44,14 @@ export class FlightService {
       arrivalDateTime: '2025-01-30T22:00:00',
       numberOfSeats: 220,
     },
+    {
+      flightNumber: 'YX4938',
+      departureCode: 'PNH',
+      arrivalCode: 'DEL',
+      departureDateTime: '2025-02-22T16:00:00',
+      arrivalDateTime: '2025-02-22T22:00:00',
+      numberOfSeats: 220,
+    },
   ];
 
   constructor(private destinationService: DestinationService) {}
@@ -56,20 +64,27 @@ export class FlightService {
     return this.flights.map((flight) => this.enrichFlightWithDestination(flight));
   }
 
-  /**
-   * Get last-minute flights (departing within 7 days) with enriched destination details.
-   * @returns Array of enriched last-minute flights
-   */
-  getLastMinuteFlights(): EnrichedFlight[] {
-    const today = new Date();
-    return this.flights
-      .filter((flight) => {
-        const departureDate = new Date(flight.departureDateTime);
-        const diffDays = Math.floor((departureDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
-        return diffDays <= 7;
-      })
-      .map((flight) => this.enrichFlightWithDestination(flight));
-  }
+/**
+ * Get last-minute flights (departing within the next 7 days, including today) with enriched destination details.
+ * @returns Array of enriched last-minute flights
+ */
+getLastMinuteFlights(): EnrichedFlight[] {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // Normalize to midnight for accurate comparison
+  const oneWeekFromNow = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+
+  return this.flights
+    .filter((flight) => {
+      const departureDate = new Date(flight.departureDateTime);
+      departureDate.setHours(0, 0, 0, 0); // Normalize the flight's departure date
+      // Include flights departing today or within the next 7 days
+      return departureDate >= today && departureDate <= oneWeekFromNow;
+    })
+    .map((flight) => this.enrichFlightWithDestination(flight));
+}
+
+
+
 
   /**
    * Get future flights (departing after today) with enriched destination details.
@@ -77,14 +92,14 @@ export class FlightService {
    */
   getFutureFlights(): Flight[] {
     const today = new Date();
-    const oneWeekFromNow = new Date();
-    oneWeekFromNow.setDate(today.getDate() + 7); // Calculate the date one week from today
+    const oneWeekFromNow = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
   
-    return this.flights.filter(flight => {
+    return this.flights.filter((flight) => {
       const departureDate = new Date(flight.departureDateTime);
-      return departureDate > oneWeekFromNow; // Only include flights after one week from today
+      return departureDate > oneWeekFromNow;
     });
   }
+  
   
 
   /**

@@ -1,9 +1,8 @@
 export interface Flight {
-    flightNumber: string;
-    departureCode: string;
-    arrivalCode: string;
-    departureDateTime: string; // ISO format
-    arrivalDateTime: string;  // ISO format
-    numberOfSeats: number;
-  }
-  
+  flightNumber: string; // Unique flight identifier
+  departureCode: string; // Departure destination code
+  arrivalCode: string; // Landing destination code
+  departureDateTime: string; // Departure date and time (ISO format)
+  arrivalDateTime: string; // Landing date and time (ISO format)
+  numberOfSeats: number; // Total number of seats on the flight
+}

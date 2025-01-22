@@ -1,13 +1,16 @@
+export interface Passenger {
+  name: string;
+  passportNumber: string;
+}
+
 export interface Reservation {
-    reservationCode: string; // Unique identifier for the reservation
-    flightNumber: string;    // Associated flight number
-    numberOfPassengers: number; // Total number of passengers
-    passengerDetails: Passenger[]; // Array of passenger information
-  }
-  
-  // Interface for individual passenger details
-  export interface Passenger {
-    name: string;           // Passenger's full name
-    passportNumber: string; // Passport number of the passenger
-  }
-  
+  reservationCode: string; // Unique reservation identifier
+  flightNumber: string; // Associated flight number
+  origin: string; // Origin of the flight
+  destination: string; // Destination of the flight
+  boardingDateTime: string; // ISO format boarding date
+  landingDateTime: string; // ISO format landing date
+  numberOfPassengers: number; // Number of passengers
+  destinationImage: string; // URL of the destination image
+  passengers: { name: string; passportNumber: string }[]; // Passenger list
+}

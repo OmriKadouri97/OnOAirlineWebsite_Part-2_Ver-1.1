@@ -1,0 +1,38 @@
+.bookings {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1976d2;
+  }
+  
+  .reservation-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reservation-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .reservation-details {
+    flex: 1;
+  }
+  
+  button {
+    margin-top: 0.5rem;
+  }
+  

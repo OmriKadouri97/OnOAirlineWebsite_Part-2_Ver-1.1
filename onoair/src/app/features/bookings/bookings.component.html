@@ -1,0 +1,28 @@
+<section class="bookings">
+    <h2>Upcoming Bookings</h2>
+    <div *ngFor="let reservation of upcomingReservations" class="reservation-card">
+      <img [src]="reservation.destinationImage" alt="Destination Image" />
+      <div class="reservation-details">
+        <p><strong>Origin:</strong> {{ reservation.origin }}</p>
+        <p><strong>Boarding:</strong> {{ reservation.boardingDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
+        <p><strong>Destination:</strong> {{ reservation.destination }}</p>
+        <p><strong>Landing:</strong> {{ reservation.landingDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
+        <p><strong>No. of passengers:</strong> {{ reservation.numberOfPassengers }}</p>
+        <button mat-raised-button color="primary" (click)="openReservationDetails(reservation.reservationCode)">View</button>
+      </div>
+    </div>
+  
+    <h2>Previous Bookings</h2>
+    <div *ngFor="let reservation of previousReservations" class="reservation-card">
+      <img [src]="reservation.destinationImage" alt="Destination Image" />
+      <div class="reservation-details">
+        <p><strong>Origin:</strong> {{ reservation.origin }}</p>
+        <p><strong>Boarding:</strong> {{ reservation.boardingDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
+        <p><strong>Destination:</strong> {{ reservation.destination }}</p>
+        <p><strong>Landing:</strong> {{ reservation.landingDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
+        <p><strong>No. of passengers:</strong> {{ reservation.numberOfPassengers }}</p>
+        <button mat-raised-button color="primary" (click)="openReservationDetails(reservation.reservationCode)">View</button>
+      </div>
+    </div>
+  </section>
+  
