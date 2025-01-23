@@ -1,12 +1,42 @@
 .footer {
+  position: fixed; /* Fix the footer to the bottom of the viewport */
+  bottom: 0; /* Align it to the bottom */
+  width: 100%; /* Full width */
+  height: 48px; /* Fixed height */
+  background-color: #1976d2; /* Light background */
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   display: flex;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #f5f5f5;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  justify-content: flex-end; /* Align the help icon to the right */
+  align-items: center;
+  padding: 0 1rem; /* Add some spacing */
 }
 
-button {
-  font-size: 1rem;
-  font-weight: bold;
+.help-icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px; /* Ensure a consistent clickable area */
+  height: 48px; /* Match width for a square button */
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none; /* Transparent background */
+  cursor: pointer; /* Pointer cursor on hover */
+  overflow: hidden; /* Ensure no overflow */
+  position: relative;
+}
+
+.help-icon {
+  font-size: 24px; /* Icon size */
+  color: #ffffff; /* Blue color */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+.help-icon-button:hover .help-icon {
+  color: #ffffff; /* Darker blue on hover */
+  transform: scale(1.2); /* Slightly enlarge the icon */
+}
+
+.help-icon-button:focus {
+  outline: none; /* Remove focus outline */
 }

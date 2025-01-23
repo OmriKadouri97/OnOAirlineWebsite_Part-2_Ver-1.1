@@ -1,8 +1,8 @@
 /* General section styling */
 section {
-  margin: 2rem auto;
+  margin: 4rem auto;
   max-width: 1200px;
-  padding: 1rem;
+  padding: 0;
 }
 
 h2 {
@@ -98,9 +98,9 @@ button {
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 4px;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease;
 }
 
 button:hover {
-  background-color: #145a9e;
+  background-color: #ffffff;
 }

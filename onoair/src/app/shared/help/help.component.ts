@@ -36,7 +36,7 @@ export class HelpComponent {
     {
       title: 'How to contact support?',
       content:
-        'Click on the support icon at the bottom of any page to contact us via email, phone, or live chat.',
+        'Click on the support icon at the bottom of any page to contact us via email or phone.',
     },
   ];
 

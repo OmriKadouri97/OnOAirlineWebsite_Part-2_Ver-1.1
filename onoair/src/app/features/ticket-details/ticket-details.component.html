@@ -1,0 +1,26 @@
+<div class="ticket-container" *ngIf="reservation">
+    <h2>Reservation Details</h2>
+    <div class="ticket-info">
+      <p><strong>Reservation Code:</strong> {{ reservation.reservationCode }}</p>
+      <p><strong>Flight Number:</strong> {{ reservation.flightNumber }}</p>
+      <p><strong>Origin:</strong> {{ reservation.origin }}</p>
+      <p><strong>Destination:</strong> {{ reservation.destination }}</p>
+      <p><strong>Boarding Date and Time:</strong> {{ reservation.boardingDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
+      <p><strong>Landing Date and Time:</strong> {{ reservation.landingDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
+      <p><strong>Number of Passengers:</strong> {{ reservation.numberOfPassengers }}</p>
+    </div>
+  
+    <div class="passengers-section" *ngIf="reservation?.passengers?.length">
+      <h3>Passengers</h3>
+      <div class="passenger-card" *ngFor="let passenger of reservation?.passengers; let i = index">
+        <p><strong>Passenger {{ i + 1 }}</strong></p>
+        <p>Name: {{ passenger?.name }}</p>
+        <p>Passport Number: {{ passenger?.passportNumber }}</p>
+      </div>
+    </div>
+  <!-- Close Button -->
+  <div class="close-button">
+    <button mat-raised-button color="warn" (click)="closePage()">Close</button>
+  </div>
+
+  </div>

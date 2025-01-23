@@ -60,6 +60,15 @@ export class DestinationService {
       imageUrl: 'https://nyc.eu/wp-content/uploads/2015/07/New_York_City-scaled.jpg',
       id: '6',
     },
+    {
+     destinationCode : 'GIG',
+      name : 'Rio de Janeiro',
+      airportName : 'Galeão International Airport',
+      airportWebsite : 'https://www.riogaleao.com/',
+      email : 'contact@riogaleao.com',  
+      imageUrl : 'https://i.pinimg.com/736x/03/65/65/0365657f0900ab58d26916788ba85104.jpg',
+      id : '7',
+    },
   ];
 
   /**

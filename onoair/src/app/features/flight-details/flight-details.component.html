@@ -1,0 +1,9 @@
+<div class="details-container" *ngIf="flight">
+  <h2>Flight Details</h2>
+  <p><strong>Flight Number:</strong> {{ flight.flightNumber }}</p>
+  <p><strong>Origin:</strong> {{ flight.departureCode }}</p>
+  <p><strong>Destination:</strong> {{ flight.arrivalCode }}</p>
+  <p><strong>Departure:</strong> {{ flight.departureDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
+  <p><strong>Arrival:</strong> {{ flight.arrivalDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
+  <p><strong>Seats Available:</strong> {{ flight.numberOfSeats }}</p>
+</div>

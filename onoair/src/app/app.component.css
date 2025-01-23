@@ -1,0 +1,17 @@
+/* Minimal styles */
+header {
+    background-color: #1976d2;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+  
+  main {
+    overflow: visible; /* Fix clipping issue for the parent container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  

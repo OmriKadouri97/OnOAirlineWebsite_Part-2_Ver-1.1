@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ReservationService } from '../../core/services/reservation.service';
 import { Reservation } from '../../core/models/reservation.model';
-import { MatButtonModule } from '@angular/material/button';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { MatDialog, MatDialogModule } from '@angular/material/dialog';
-import { FlightDetailsDialogComponent } from '../flight-details-dialog/flight-details-dialog.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-bookings',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatDialogModule],
+  imports: [CommonModule, MatCardModule, MatButtonModule],
   templateUrl: './bookings.component.html',
   styleUrls: ['./bookings.component.css'],
 })
@@ -20,7 +20,7 @@ export class BookingsComponent implements OnInit {
   // Inject MatDialog into the constructor
   constructor(
     private reservationService: ReservationService,
-    private dialog: MatDialog // Inject MatDialog here
+    private router : Router
   ) {}
 
   ngOnInit(): void {
@@ -28,15 +28,11 @@ export class BookingsComponent implements OnInit {
     this.previousReservations = this.reservationService.getPreviousReservations();
   }
 
-  openReservationDetails(reservationId: string): void {
-    const reservation = this.reservationService.getReservationById(reservationId);
-    if (reservation) {
-      this.dialog.open(FlightDetailsDialogComponent, {
-        width: '400px',
-        data: reservation, // Pass the reservation details to the dialog
-      });
+  navigateToTicketDetails(reservationCode: string): void {
+    if (reservationCode) {
+      this.router.navigate(['/ticket-details', reservationCode]);
     } else {
-      console.error(`Reservation with ID ${reservationId} not found.`);
+      console.error('Invalid reservation code');
     }
-  }
+  }  
 }

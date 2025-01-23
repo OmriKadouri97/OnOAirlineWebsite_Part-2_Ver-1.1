@@ -6,8 +6,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatSort, MatSortModule } from '@angular/material/sort';
-import { MatDialog } from '@angular/material/dialog';
-import { FlightDetailsDialogComponent } from '../flight-details-dialog/flight-details-dialog.component';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -22,7 +22,7 @@ export class HomeComponent implements AfterViewInit {
 
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private flightService: FlightService, private dialog: MatDialog) {}
+  constructor(private flightService: FlightService, private router: Router) {}
 
   ngOnInit(): void {
     this.lastMinuteFlights = this.flightService.getLastMinuteFlights();
@@ -34,10 +34,7 @@ export class HomeComponent implements AfterViewInit {
     this.futureFlights.sort = this.sort;
   }
 
-  openFlightDetails(flight: Flight): void {
-    this.dialog.open(FlightDetailsDialogComponent, {
-      width: '400px',
-      data: flight,
-    });
+  navigateToFlightDetails(flightNumber: string): void {
+    this.router.navigate(['/flight-details', flightNumber]);
   }
 }

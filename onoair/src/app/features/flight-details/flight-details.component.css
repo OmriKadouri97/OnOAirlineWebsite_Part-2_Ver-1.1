@@ -1,0 +1,21 @@
+.details-container {
+    margin: 2rem auto;
+    max-width: 800px;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-container h2 {
+    color: #1976d2;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .details-container p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  

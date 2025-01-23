@@ -8,7 +8,9 @@
         <p><strong>Destination:</strong> {{ reservation.destination }}</p>
         <p><strong>Landing:</strong> {{ reservation.landingDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
         <p><strong>No. of passengers:</strong> {{ reservation.numberOfPassengers }}</p>
-        <button mat-raised-button color="primary" (click)="openReservationDetails(reservation.reservationCode)">View</button>
+        <button mat-raised-button color="primary" (click)="navigateToTicketDetails(reservation.reservationCode)"> 
+          View Ticket
+        </button>
       </div>
     </div>
   
@@ -21,7 +23,9 @@
         <p><strong>Destination:</strong> {{ reservation.destination }}</p>
         <p><strong>Landing:</strong> {{ reservation.landingDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
         <p><strong>No. of passengers:</strong> {{ reservation.numberOfPassengers }}</p>
-        <button mat-raised-button color="primary" (click)="openReservationDetails(reservation.reservationCode)">View</button>
+        <button mat-raised-button color="primary" (click)="navigateToTicketDetails(reservation.reservationCode)"> 
+          View Ticket
+        </button>
       </div>
     </div>
   </section>

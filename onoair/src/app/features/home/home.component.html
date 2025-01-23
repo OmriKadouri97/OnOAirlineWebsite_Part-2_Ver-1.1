@@ -13,7 +13,9 @@
         <p><strong>From: {{ flight.departureCode }}</strong></p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-raised-button color="primary" (click)="openFlightDetails(flight)">Book Now</button>
+        <button mat-raised-button color="primary" (click)="navigateToFlightDetails(flight.flightNumber)">
+          View Details
+        </button>
       </mat-card-actions>
     </mat-card>
   </div>
@@ -50,7 +52,9 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef>Actions</th>
       <td mat-cell *matCellDef="let flight">
-        <button mat-raised-button color="primary" (click)="openFlightDetails(flight)">View</button>
+        <button mat-raised-button color="primary" (click)="navigateToFlightDetails(flight.flightNumber)">
+          View Details
+        </button>
       </td>
     </ng-container>
 
