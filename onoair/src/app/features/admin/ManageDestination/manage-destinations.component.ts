@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DestinationService} from '../../../core/services/destination.service';
 import { Destination } from '../../../core/models/destination.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-manage-destinations',
@@ -13,7 +14,7 @@ import { Destination } from '../../../core/models/destination.model';
 export class ManageDestinationsComponent implements OnInit {
   destinations: Destination[] = [];
 
-  constructor(private destinationService: DestinationService) {}
+  constructor(private destinationService: DestinationService, private router: Router) {}
 
   ngOnInit(): void {
     this.loadDestinations();
@@ -23,8 +24,7 @@ export class ManageDestinationsComponent implements OnInit {
     this.destinations = this.destinationService.getAllDestinations();
   }
 
-  viewDestinationDetails(destination: Destination): void {
-    // Logic to view destination details (e.g., open a modal or navigate to a details page)
-    console.log('Viewing details for destination:', destination.name);
+  navigateToViewDestination(destinationCode: string): void {
+    this.router.navigate(['/view-destination', destinationCode]);
   }
 }

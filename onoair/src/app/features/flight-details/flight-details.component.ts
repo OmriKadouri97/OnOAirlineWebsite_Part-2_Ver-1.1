@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FlightService, EnrichedFlight } from '../../core/services/flight.service';
+import { Location } from '@angular/common';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class FlightDetailsComponent implements OnInit {
   flight: EnrichedFlight | undefined;
 
-  constructor(private route: ActivatedRoute, private flightService: FlightService) {}
+  constructor(private route: ActivatedRoute, private flightService: FlightService, private location: Location) {}
 
   ngOnInit(): void {
     const flightNumber = this.route.snapshot.paramMap.get('id'); // Get flight ID from URL
@@ -21,4 +22,9 @@ export class FlightDetailsComponent implements OnInit {
       this.flight = this.flightService.getByFlightNumber(flightNumber); // Fetch flight data
     }
   }
+
+  goBack(): void {
+    this.location.back();
+  }
+
 }

@@ -1,21 +1,54 @@
 .details-container {
-    margin: 2rem auto;
-    max-width: 800px;
-    background: #ffffff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .details-container h2 {
-    color: #1976d2;
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-  
-  .details-container p {
-    font-size: 1rem;
-    margin: 0.5rem 0;
-    color: #333;
-  }
-  
+  margin: 2rem auto;
+  max-width: 800px;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Ensures everything inside is centered horizontally */
+}
+
+.details-container h2 {
+  color: #1976d2;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.details-container p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.back-button-container {
+  display: flex; /* Use flexbox to center the button */
+  justify-content: center; /* Centers the button horizontally */
+  margin-top: 1rem; /* Add spacing at the top */
+}
+
+.back-button {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background-color: #005a9e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:active {
+  background-color: #003a66;
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}

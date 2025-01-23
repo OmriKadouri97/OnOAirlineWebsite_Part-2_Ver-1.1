@@ -1,0 +1,21 @@
+<div *ngIf="destination" class="destination-container">
+    <h1>New Destination</h1>
+    <div class="destination-details">
+      <p><strong>Destination Code:</strong> {{ destination.destinationCode }}</p>
+      <p><strong>Destination Name:</strong> {{ destination.name }}</p>
+      <p><strong>Airport Name:</strong> {{ destination.airportName }}</p>
+      <p><strong>Airport URL:</strong> 
+        <a [href]="destination.airportWebsite" target="_blank">{{ destination.airportWebsite }}</a>
+      </p>
+      <p><strong>Image URL:</strong> 
+        <a [href]="destination.imageUrl" target="_blank">{{ destination.imageUrl }}</a>
+      </p>
+      <img [src]="destination.imageUrl" alt="{{ destination.name }}" />
+    </div>
+    <div class="back-button-container">
+      <button mat-raised-button color="primary" class="back-button" (click)="goBack()">Back</button>
+    </div>
+  </div>
+  
+  
+  

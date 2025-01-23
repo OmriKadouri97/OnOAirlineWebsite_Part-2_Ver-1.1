@@ -1,29 +1,59 @@
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-  }
-  
-  th, td {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-  }
-  
-  button {
-    background-color: #0078d7;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  button:hover {
-    background-color: #005a9e;
-  }
-  
+  width: 97%; /* Reduce table width for better centering and readability */
+  max-width: 2000px; /* Ensure it doesn't get too wide on large screens */
+  margin: 1rem auto; /* Center the table horizontally with top margin */
+  border-collapse: collapse;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for better visual hierarchy */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  overflow: hidden; /* Prevent corners from overflowing */
+}
+.manage-flights h2{
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+th, td {
+  padding: 0.75rem; /* Increased padding for better readability */
+  border: 1px solid #ddd; /* Lightened border for a softer look */
+  text-align: left;
+  font-size: 0.95rem; /* Standard font size for better legibility */
+}
+
+th {
+  background-color: #f4f4f4;
+  color: #333; /* Add contrast to header text */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa; /* Add subtle row striping for readability */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+button {
+  background-color: #0078d7; /* Primary color for the button */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
+}
+
+button:hover {
+  background-color: #005a9e; /* Darker shade for hover */
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+button:active {
+  transform: scale(1); /* Reset scale on click */
+  background-color: #004578; /* Even darker shade for active state */
+}

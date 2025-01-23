@@ -22,7 +22,7 @@
           <td>{{ flight.arrivalDateTime | date: 'shortTime' }}</td>
           <td>{{ flight.numberOfSeats }}</td>
           <td>
-            <button class="btn btn-view" (click)="viewFlightDetails(flight)">View Details</button>
+            <button mat-raised-button color="primary" class="btn btn-view" (click)="navigateToFlightDetails(flight.flightNumber)">View Details</button>
           </td>
         </tr>
       </tbody>

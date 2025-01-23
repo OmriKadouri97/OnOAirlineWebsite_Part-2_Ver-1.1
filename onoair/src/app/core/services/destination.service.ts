@@ -12,7 +12,7 @@ export class DestinationService {
       airportName: 'Ben Gurion Airport',
       airportWebsite: 'https://www.iaa.gov.il/en/airports/ben-gurion/',
       email: 'contact@tlvairport.com',
-      imageUrl: 'tel-aviv.jpg',
+      imageUrl: 'https://i.pinimg.com/736x/fe/fd/2d/fefd2dba67dcda3d4fd7b80eb2ef10fa.jpg',
       id: '1',
     },
     {
@@ -30,7 +30,7 @@ export class DestinationService {
       airportName: 'Larnaca International Airport',
       airportWebsite: 'https://www.hermesairports.com/',
       email: 'contact@larnacaairport.com',
-      imageUrl: 'larnaca.jpg',
+      imageUrl: 'https://i.pinimg.com/736x/cf/bc/eb/cfbceb21d7e15583e7ea49af452e6edc.jpg',
       id: '3',
     },
     {
@@ -48,7 +48,7 @@ export class DestinationService {
       airportName: 'London Heathrow Airport',
       airportWebsite: 'https://www.heathrow.com/',
       email: 'contact@heathrow.com',
-      imageUrl: 'london.jpg',
+      imageUrl: 'https://i.pinimg.com/736x/aa/a4/cb/aaa4cbf7a92dc6d8302199b08eadf9d5.jpg',
       id: '5',
     },
     {

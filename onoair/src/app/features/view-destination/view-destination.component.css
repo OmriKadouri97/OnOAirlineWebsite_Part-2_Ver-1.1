@@ -1,0 +1,63 @@
+.destination-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .destination-details {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .destination-details a {
+    color: #1976d2;
+    text-decoration: none;
+  }
+  
+  .destination-details img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .error-message {
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .back-button {
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #1976d2; /* Primary blue color */
+    color: white; /* White text for contrast */
+    border: none;
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for visibility */
+  }
+  
+  .back-button:hover {
+    background-color: #005a9e; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+  }
+  
+  .back-button:active {
+    background-color: #003a66; /* Even darker blue on click */
+    transform: translateY(0); /* Remove lift effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow on click */
+  }
+  
+  

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlightService } from '../../../core/services/flight.service';
 import { Flight } from '../../../core/models/flight.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-manage-flights',
@@ -13,7 +14,7 @@ import { Flight } from '../../../core/models/flight.model';
 export class ManageFlightsComponent implements OnInit {
   flights: Flight[] = [];
 
-  constructor(private flightService: FlightService) {}
+  constructor(private flightService: FlightService, private router: Router) {}
 
   ngOnInit(): void {
     this.loadFlights();
@@ -23,8 +24,7 @@ export class ManageFlightsComponent implements OnInit {
     this.flights = this.flightService.getAll();
   }
 
-  viewFlightDetails(flight: Flight): void {
-    // Add logic to handle flight details viewing
-    console.log('Viewing details for flight:', flight.flightNumber);
+  navigateToFlightDetails(flightNumber: string): void {
+    this.router.navigate(['/flight-details', flightNumber]); // Navigate to flight-details
   }
 }

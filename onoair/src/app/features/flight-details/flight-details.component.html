@@ -7,3 +7,7 @@
   <p><strong>Arrival:</strong> {{ flight.arrivalDateTime | date: 'dd/MM/yyyy, h:mm a' }}</p>
   <p><strong>Seats Available:</strong> {{ flight.numberOfSeats }}</p>
 </div>
+
+<div class="back-button-container">
+  <button mat-raised-button color="primary" class="back-button" (click)="goBack()">Back</button>
+</div>
