@@ -20,7 +20,7 @@ h2 {
 
 .section-title {
   text-align: center;
-  color: #1976d2;
+  color: var(--primary-color, #1976d2);
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -34,18 +34,15 @@ h2 {
 
 .flight-card {
   width: 320px;
-  display: flex;
-  flex-direction: column;
   background-color: #d3cebe;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden;
+  box-shadow: var(--box-shadow, 0px 4px 8px rgba(0, 0, 0, 0.1));
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .flight-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--box-shadow-hover, 0px 6px 12px rgba(0, 0, 0, 0.15));
 }
 
 /* Material Card Styling */
