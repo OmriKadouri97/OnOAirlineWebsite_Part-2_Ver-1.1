@@ -1,21 +1,21 @@
 .destination-container {
     max-width: 800px;
-    margin: 2rem auto;
+    margin: 1rem auto; /* Reduced top margin to lift the container */
     padding: 1.5rem;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Ensure the content is centered */
-    overflow: auto; /* Allow internal scrolling if content exceeds the container */
-    height: fit-content; /* Automatically adjust height based on content */
-    position: relative; /* Ensure proper placement of elements */
+    text-align: center; /* Ensure content is centered */
+    overflow: hidden; /* Prevent content overflow */
+    position: relative; /* Relative positioning for proper placement */
+    transform: translateY(-24px); /* Lift the container slightly */
   }
   
   .destination-details {
     line-height: 1.5;
     font-size: 1rem;
     color: #333;
-    text-align: left; /* Better readability for text */
+    text-align: left; /* Align text for better readability */
   }
   
   .destination-details a {
@@ -24,7 +24,7 @@
   }
   
   .destination-details img {
-    max-width: 100%; /* Ensure image stays within container */
+    width: 100%;
     height: auto;
     margin-top: 1rem;
     border-radius: 8px;
@@ -38,29 +38,31 @@
   }
   
   .back-button {
+    display: inline-block;
+    margin: 0; /* Ensure no extra margins around the button */
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    background-color: #1976d2; /* Primary blue */
-    color: white; /* White text */
+    background-color: #1976d2; /* Primary blue color */
+    color: white; /* White text for contrast */
     border: none;
     border-radius: 6px; /* Rounded corners */
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for visibility */
   }
   
   .back-button:hover {
-    background-color: #005a9e; /* Darker blue */
-    transform: translateY(-2px); /* Lift effect */
+    background-color: #005a9e; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More prominent shadow */
   }
   
   .back-button:active {
-    background-color: #003a66; /* Even darker blue */
-    transform: translateY(0); /* Reset lift effect */
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    background-color: #003a66; /* Even darker blue on click */
+    transform: translateY(0); /* Remove lift effect */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow on click */
   }
   
