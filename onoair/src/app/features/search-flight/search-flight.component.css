@@ -4,6 +4,13 @@
   font-family: 'Roboto', Arial, sans-serif;
 }
 
+.search-flight h2 {
+  text-align: center;
+  margin-bottom: 1.5rem; 
+  font-weight: bold;
+  font-size: 36px; 
+}
+
 table {
   width: 100%;
   margin-top: 1rem;
