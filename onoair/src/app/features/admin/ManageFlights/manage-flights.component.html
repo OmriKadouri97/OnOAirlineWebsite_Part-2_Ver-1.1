@@ -1,16 +1,16 @@
 <div class="manage-flights">
-    <h2>Manage Flights</h2>
-  
-    <table class="flights-table">
+  <h2>Manage Flights</h2>
+  <div class="table-container">
+    <table>
       <thead>
         <tr>
-          <th scope="col">Flight Number</th>
-          <th scope="col">Departure Code</th>
-          <th scope="col">Destination</th>
-          <th scope="col">Departure Date</th>
-          <th scope="col">Arrival Date</th>
-          <th scope="col">Seats</th>
-          <th scope="col">Actions</th>
+          <th>Flight Number</th>
+          <th>Departure Code</th>
+          <th>Arrival Code</th>
+          <th>Departure Date</th>
+          <th>Arrival Date</th>
+          <th>Number of Seats</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -18,14 +18,16 @@
           <td>{{ flight.flightNumber }}</td>
           <td>{{ flight.departureCode }}</td>
           <td>{{ flight.arrivalCode }}</td>
-          <td>{{ flight.departureDateTime | date: 'shortDate' }}</td>
-          <td>{{ flight.arrivalDateTime | date: 'shortTime' }}</td>
+          <td>{{ flight.departureDateTime | date: 'dd/MM/yyyy, h:mm a' }}</td>
+          <td>{{ flight.arrivalDateTime | date: 'dd/MM/yyyy, h:mm a' }}</td>
           <td>{{ flight.numberOfSeats }}</td>
           <td>
-            <button mat-raised-button color="primary" class="btn btn-view" (click)="navigateToFlightDetails(flight.flightNumber)">View Details</button>
+            <button mat-raised-button color="primary" (click)="navigateToFlightDetails(flight.flightNumber)">
+              View Details
+            </button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
-  
+</div>

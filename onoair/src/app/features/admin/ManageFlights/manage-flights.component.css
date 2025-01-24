@@ -1,43 +1,60 @@
-table {
-  width: 97%; /* Reduce table width for better centering and readability */
-  max-width: 2000px; /* Ensure it doesn't get too wide on large screens */
-  margin: 1rem auto; /* Center the table horizontally with top margin */
-  border-collapse: collapse;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for better visual hierarchy */
-  border-radius: 8px; /* Rounded corners for a modern look */
-  overflow: hidden; /* Prevent corners from overflowing */
-}
-.manage-flights h2{
-  text-align: center;
-  margin-top: 1rem;
-  font-weight: bold;
-  font-size: 36px;
+.manage-flights {
+  margin: 1rem auto;
+  max-width: 100%; /* Allow full width of the container */
+  overflow: hidden; /* Prevent unnecessary scrolling */
 }
 
-th, td {
-  padding: 0.75rem; /* Increased padding for better readability */
-  border: 1px solid #ddd; /* Lightened border for a softer look */
+.manage-flights h2 {
+  text-align: center; /* Center the heading */
+  font-weight: bold; /* Bold font weight for emphasis */
+  font-size: 36px; /* Larger font size for headings */
+  margin-bottom: 1.5rem; /* Add space below the heading */
+}
+
+.table-container {
+  margin: 1rem auto; /* Add space around the table */
+  max-width: 1500px; /* Set a maximum width for the table container */
+  max-height: 400px; /* Set a maximum height for the table container */
+  overflow-y: auto; /* Enable vertical scrolling if rows exceed the height */
+  overflow-x: auto; /* Enable horizontal scrolling for wide tables */
+  border: 1px solid #ddd; /* Add a border around the container */
+  border-radius: 8px; /* Rounded corners for the container */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the container */
+}
+
+table {
+  width: 100%; /* Ensure the table stretches to the container's width */
+  max-width: 1500px; /* Optional: Set a maximum width for the table */
+  border-collapse: collapse;
+  margin: 0;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid #ddd; /* Light border for better visibility */
   text-align: left;
-  font-size: 0.95rem; /* Standard font size for better legibility */
+  font-size: 0.95rem;
 }
 
 th {
   background-color: #f4f4f4;
-  color: #333; /* Add contrast to header text */
+  color: #333; /* Add contrast to the header text */
   font-weight: bold;
   text-transform: uppercase;
 }
 
 tr:nth-child(even) {
-  background-color: #fafafa; /* Add subtle row striping for readability */
+  background-color: #fafafa; /* Alternate row colors */
 }
 
 tr:hover {
   background-color: #f1f1f1; /* Highlight row on hover */
 }
 
+/* Button Styling */
 button {
-  background-color: #0078d7; /* Primary color for the button */
+  background-color: #0078d7;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -45,15 +62,33 @@ button {
   border-radius: 4px;
   font-size: 0.9rem;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and click effects */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-  background-color: #005a9e; /* Darker shade for hover */
-  transform: scale(1.05); /* Slight enlargement on hover */
+  background-color: #005a9e;
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
 }
 
 button:active {
-  transform: scale(1); /* Reset scale on click */
-  background-color: #004578; /* Even darker shade for active state */
+  transform: scale(1);
+  background-color: #004578;
+}
+
+/* Scrollbar Customization */
+.table-container::-webkit-scrollbar {
+  width: 12px; /* Adjust scrollbar width */
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #1976d2; /* Scrollbar thumb color */
+  border-radius: 8px; /* Rounded scrollbar thumb */
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #005a9e; /* Darker color on hover */
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f5f5f5; /* Light background for scrollbar track */
 }

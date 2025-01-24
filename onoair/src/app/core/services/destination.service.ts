@@ -69,6 +69,33 @@ export class DestinationService {
       imageUrl : 'https://i.pinimg.com/736x/03/65/65/0365657f0900ab58d26916788ba85104.jpg',
       id : '7',
     },
+    {
+      destinationCode : 'DXB',
+       name : 'Dubai',
+       airportName : 'Dubai International Airport',
+       airportWebsite : 'https://www.dubaiairports.ae/',
+       email : 'comments@dubaiairports.ae',  
+       imageUrl : 'https://i.pinimg.com/736x/f5/36/63/f53663d5ab227cb44df874fec7d45ae4.jpg',
+       id : '8',
+     },
+     {
+      destinationCode : 'BIA',
+       name : 'Sri Lanka',
+       airportName : 'Bandaranaike International Airport',
+       airportWebsite : 'https://www.airport.lk/',
+       email : 'comments@airport.lk',  
+       imageUrl : 'https://i.pinimg.com/736x/ad/ec/62/adec62762bd1b1967279f85636231bc7.jpg',
+       id : '9',
+     },
+     {
+      destinationCode : 'MNL',
+       name : 'Philippines',
+       airportName : 'Ninoy Aquino International Airport',
+       airportWebsite : 'https://www.miaa.gov.ph/',
+       email : 'comments@miaa.gov.ph',  
+       imageUrl : 'https://i.pinimg.com/736x/19/90/39/19903983026c3855561a53d962b24d07.jpg',
+       id : '10',
+     },
   ];
 
   /**
