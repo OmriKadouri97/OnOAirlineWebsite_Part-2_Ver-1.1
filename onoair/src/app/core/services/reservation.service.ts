@@ -126,8 +126,8 @@ export class ReservationService {
       flightNumber: 'LH7834',
       origin: 'Rio De Janeiro',
       destination: 'Philippines',
-      boardingDateTime: '2025-03-30T12:00:00',
-      landingDateTime: '2025-03-30T22:00:00',
+      boardingDateTime: '2025-02-01T14:00:00',
+      landingDateTime: '2025-02-01T22:00:00',
       numberOfPassengers: 2,
       destinationImage: 'https://i.pinimg.com/736x/19/90/39/19903983026c3855561a53d962b24d07.jpg',
       passengers: [

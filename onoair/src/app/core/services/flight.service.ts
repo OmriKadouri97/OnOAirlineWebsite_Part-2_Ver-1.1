@@ -80,8 +80,8 @@ export class FlightService {
       flightNumber: 'LH7834',
       departureCode: 'GIG',
       arrivalCode: 'MNL',
-      departureDateTime: '2025-03-30T12:00:00',
-      arrivalDateTime: '2025-03-30T22:00:00',
+      departureDateTime: '2025-02-01T14:00:00',
+      arrivalDateTime: '2025-02-01T22:00:00',
       numberOfSeats: 280,
     },
     {
