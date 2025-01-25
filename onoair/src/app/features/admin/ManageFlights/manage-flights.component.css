@@ -1,55 +1,93 @@
 .manage-flights {
-  margin: 1rem auto;
-  max-width: 100%; /* Allow full width of the container */
-  overflow: hidden; /* Prevent unnecessary scrolling */
+  margin: 0 auto;
+  max-width: 1200px; /* Center container */
+  overflow: hidden; /* Prevent unnecessary overflow */
+  padding: 0; /* Remove default padding */
 }
 
 .manage-flights h2 {
-  text-align: center; /* Center the heading */
-  font-weight: bold; /* Bold font weight for emphasis */
-  font-size: 36px; /* Larger font size for headings */
-  margin-bottom: 1.5rem; /* Add space below the heading */
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 0.5rem ; /* Add space below heading */
+  margin-top:0.5rem; /* Add space above heading */
 }
 
+/* Table container to handle scrolling */
 .table-container {
-  margin: 1rem auto; /* Add space around the table */
-  max-width: 1500px; /* Set a maximum width for the table container */
-  max-height: 400px; /* Set a maximum height for the table container */
-  overflow-y: auto; /* Enable vertical scrolling if rows exceed the height */
-  overflow-x: auto; /* Enable horizontal scrolling for wide tables */
-  border: 1px solid #ddd; /* Add a border around the container */
-  border-radius: 8px; /* Rounded corners for the container */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the container */
+  display: flex; /* Use flexbox for better alignment */
+  flex-direction: column; /* Ensure the content flows vertically */
+  margin: 0 !important; /* Remove unwanted margins */
+  max-width: 100%; /* Make the container responsive */
+  max-height: 500px; /* Set a fixed height for vertical scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Hide horizontal scrolling */
+  border: 1px solid #ddd; /* Add a light border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #ffffff; /* White background for clarity */
+  padding: 0 !important; /* Eliminate extra padding */
+  position: relative; /* Necessary for positioning adjustments */
 }
 
-table {
-  width: 100%; /* Ensure the table stretches to the container's width */
-  max-width: 1500px; /* Optional: Set a maximum width for the table */
-  border-collapse: collapse;
-  margin: 0;
+/* Angular Material Table */
+.table-container table {
+  width: 100%; /* Ensure the table fills the container width */
+  table-layout: auto; /* Allow the table to adjust column widths dynamically */
+  border-collapse: collapse; /* Prevent gaps between table cells */
+  background-color: #ffffff; /* Maintain a clean background */
+  margin: 0; /* No extra margin */
+  padding: 0; /* No extra padding */
+  position: static; /* Prevent unnecessary relative positioning */
 }
 
-th,
-td {
+.mat-header-row {
+  background-color: #004aad;
+  color: white;
+}
+
+.mat-header-cell {
   padding: 0.75rem;
-  border: 1px solid #ddd; /* Light border for better visibility */
-  text-align: left;
-  font-size: 0.95rem;
-}
-
-th {
-  background-color: #f4f4f4;
-  color: #333; /* Add contrast to the header text */
   font-weight: bold;
   text-transform: uppercase;
+  color: white;
+  text-align: center; /* Center-align header text */
 }
 
-tr:nth-child(even) {
-  background-color: #fafafa; /* Alternate row colors */
+.mat-row {
+  border-bottom: 1px solid #ddd;
 }
 
-tr:hover {
-  background-color: #f1f1f1; /* Highlight row on hover */
+.mat-cell {
+  padding: 0.75rem;
+  text-align: center; /* Center-align cell text */
+  color: #333;
+}
+
+.mat-row:nth-child(even) .mat-cell {
+  background-color: #f1f5fa;
+}
+
+.mat-row:hover .mat-cell {
+  background-color: #eaf4ff;
+}
+
+/* Scrollbar Customization */
+.table-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: #1976d2;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background-color: #005a9e;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f5f5f5;
 }
 
 /* Button Styling */
@@ -66,29 +104,11 @@ button {
 }
 
 button:hover {
-  background-color: #005a9e;
-  transform: scale(1.05); /* Slightly enlarge the button on hover */
+  background-color: #ffffff;
+  transform: scale(1.05);
 }
 
 button:active {
   transform: scale(1);
-  background-color: #004578;
-}
-
-/* Scrollbar Customization */
-.table-container::-webkit-scrollbar {
-  width: 12px; /* Adjust scrollbar width */
-}
-
-.table-container::-webkit-scrollbar-thumb {
-  background-color: #1976d2; /* Scrollbar thumb color */
-  border-radius: 8px; /* Rounded scrollbar thumb */
-}
-
-.table-container::-webkit-scrollbar-thumb:hover {
-  background-color: #005a9e; /* Darker color on hover */
-}
-
-.table-container::-webkit-scrollbar-track {
-  background: #f5f5f5; /* Light background for scrollbar track */
+  background-color: #ffffff;
 }

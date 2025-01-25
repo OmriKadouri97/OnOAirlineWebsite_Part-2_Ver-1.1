@@ -84,7 +84,7 @@ export class DestinationService {
        airportName : 'Bandaranaike International Airport',
        airportWebsite : 'https://www.airport.lk/',
        email : 'comments@airport.lk',  
-       imageUrl : 'https://i.pinimg.com/736x/ad/ec/62/adec62762bd1b1967279f85636231bc7.jpg',
+       imageUrl : 'https://i.pinimg.com/736x/77/4e/d8/774ed8d2e2cc3528deb24f57675efb56.jpg',
        id : '9',
      },
      {

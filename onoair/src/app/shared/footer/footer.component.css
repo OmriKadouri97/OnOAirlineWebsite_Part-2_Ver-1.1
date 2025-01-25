@@ -3,7 +3,7 @@
   bottom: 0; /* Align it to the bottom */
   width: 100%; /* Full width */
   height: 48px; /* Fixed height */
-  background-color: #1976d2; /* Light background */
+  background-color: #004aad; /* Primary blue */
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   display: flex;
   justify-content: flex-end; /* Align the help icon to the right */

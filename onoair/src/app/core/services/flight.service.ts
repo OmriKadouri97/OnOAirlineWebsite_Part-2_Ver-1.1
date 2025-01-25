@@ -57,7 +57,7 @@ export class FlightService {
       departureCode: 'KRK',
       arrivalCode: 'DXB',
       departureDateTime: '2025-03-24T06:30:00',
-      arrivalDateTime: '2025-01-22T11:40:00',
+      arrivalDateTime: '2025-03-24T11:40:00',
       numberOfSeats: 270,
     },
     {
